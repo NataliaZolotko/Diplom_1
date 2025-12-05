@@ -11,14 +11,12 @@ def sample_burger():
     from praktikum.burger import Burger
     return Burger()
 
-
 @pytest.fixture(scope='function')
 def mock_bun():
     bun = Mock()
     bun.get_name.return_value = "test_bun"
     bun.get_price.return_value = 50
     return bun
-
 
 @pytest.fixture(scope='function')
 def mock_ingredients():
@@ -30,7 +28,6 @@ def mock_ingredients():
         ingredient.get_price.return_value = float((i + 1) * 10)
         ingredients.append(ingredient)
     return ingredients
-
 
 @pytest.fixture(params=[0, 1, 3, 5])
 def ingredient_count(request):

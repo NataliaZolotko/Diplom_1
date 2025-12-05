@@ -1,7 +1,6 @@
 import pytest
 from unittest.mock import Mock, patch, call
 from typing import List
-
 from praktikum.burger import Burger
 from praktikum.bun import Bun
 from praktikum.ingredient import Ingredient
